@@ -1,16 +1,17 @@
 import type {
-  CommentConfig,
-  LicenseConfig,
-  NavBarConfig,
-  ProfileConfig,
-  SiteConfig,
-} from './types/config'
-import { LinkPreset } from './types/config'
+	CommentConfig,
+	ExpressiveCodeConfig,
+	LicenseConfig,
+	NavBarConfig,
+	ProfileConfig,
+	SiteConfig,
+} from "./types/config";
+import { LinkPreset } from "./types/config";
 
 export const siteConfig: SiteConfig = {
 	title: "Akari",
 	subtitle: "Demo Site",
-	lang: "en", // 'en', 'zh_CN', 'zh_TW', 'ja', 'ko', 'es', 'th'
+	lang: "en", // Language code, e.g. 'en', 'zh_CN', 'ja', etc.
 	themeColor: {
 		hue: 250, // Default hue for the theme color, from 0 to 360. e.g. red: 0, teal: 200, cyan: 250, pink: 345
 		fixed: false, // Hide the theme color picker for visitors
@@ -83,25 +84,31 @@ export const licenseConfig: LicenseConfig = {
 	url: "https://creativecommons.org/licenses/by-nc-sa/4.0/",
 };
 
+export const expressiveCodeConfig: ExpressiveCodeConfig = {
+	// Note: Some styles (such as background color) are being overridden, see the astro.config.mjs file.
+	// Please select a dark theme, as this blog theme currently only supports dark background color
+	theme: "github-dark",
+};
+
 export const commentConfig: CommentConfig = {
-  // disqus: {
-  //   shortname: 'fuwari',
-  // },
-  giscus: {
-    repo: 'moeyua/fuwari',
-    repoId: 'R_kgDOKy9HOQ',
-    category: 'General',
-    categoryId: 'DIC_kwDOKy9HOc4CegmW',
-    mapping: 'title',
-    strict: '0',
-    reactionsEnabled: '1',
-    emitMetadata: '1',
-    inputPosition: 'top',
-    theme: 'reactive',
-    lang: 'zh-CN',
-    loading: 'lazy',
-  },
-  // twikoo: {
-  //   envId: 'https://twikoo-tau-flame.vercel.app',
-  // },
-}
+	// disqus: {
+	//   shortname: 'fuwari',
+	// },
+	giscus: {
+		repo: "moeyua/fuwari",
+		repoId: "R_kgDOKy9HOQ",
+		category: "General",
+		categoryId: "DIC_kwDOKy9HOc4CegmW",
+		mapping: "title",
+		strict: "0",
+		reactionsEnabled: "1",
+		emitMetadata: "1",
+		inputPosition: "top",
+		theme: "reactive",
+		lang: "zh-CN",
+		loading: "lazy",
+	},
+	// twikoo: {
+	//   envId: 'https://twikoo-tau-flame.vercel.app',
+	// },
+};
